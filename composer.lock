@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59f2812d45c9301f050ccb127064f487",
-    "content-hash": "f749b6fc53e136087f0356f13b66e409",
+    "hash": "893ad1c682e870da9cfe719c82b057e3",
+    "content-hash": "5ca70e0acc374b85e9f2fb38ba87ec52",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -3539,6 +3539,52 @@
             "time": "2016-03-09 05:03:14"
         },
         {
+            "name": "riskihajar/terbilang",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/riskihajar/terbilang.git",
+                "reference": "6f5b79bfc34bf7066dbc362f308ea487f2e70bdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/riskihajar/terbilang/zipball/6f5b79bfc34bf7066dbc362f308ea487f2e70bdb",
+                "reference": "6f5b79bfc34bf7066dbc362f308ea487f2e70bdb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.2||~5",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Riskihajar\\Terbilang\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "riskihajar",
+                    "email": "riskihajar@gmail.com",
+                    "homepage": "http://riskihajar.com"
+                }
+            ],
+            "description": "Convert number & date to words in any language for Laravel 4 | 5",
+            "homepage": "https://github.com/riskihajar/terbilang",
+            "keywords": [
+                "date to words",
+                "laravel",
+                "number to roman",
+                "number to words",
+                "terbilang"
+            ],
+            "time": "2016-08-27 03:55:35"
+        },
+        {
             "name": "rollbar/rollbar",
             "version": "v0.15.0",
             "source": {
@@ -4637,12 +4683,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tymondesigns/jwt-auth.git",
-                "reference": "8854d33efffb6a2b8cd743718bb749ee4901e111"
+                "reference": "52d61befdcd47df946c903904243f8fdb295559a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/8854d33efffb6a2b8cd743718bb749ee4901e111",
-                "reference": "8854d33efffb6a2b8cd743718bb749ee4901e111",
+                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/52d61befdcd47df946c903904243f8fdb295559a",
+                "reference": "52d61befdcd47df946c903904243f8fdb295559a",
                 "shasum": ""
             },
             "require": {
@@ -4695,7 +4741,7 @@
                 "jwt",
                 "laravel"
             ],
-            "time": "2016-09-26 20:47:17"
+            "time": "2016-09-28 18:35:16"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5182,16 +5228,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd"
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/9270140b940ff02e58ec577c237274e92cd40cdd",
-                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
                 "shasum": ""
             },
             "require": {
@@ -5223,7 +5269,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-06-10 09:48:41"
+            "time": "2016-09-30 07:12:33"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -6353,7 +6399,8 @@
         "mikemix/wiziq-integration": 20,
         "cossou/jasperphp": 20,
         "tymon/jwt-auth": 20,
-        "phpoffice/phpword": 20
+        "phpoffice/phpword": 20,
+        "riskihajar/terbilang": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

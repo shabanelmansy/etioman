@@ -50,11 +50,10 @@
                                             <td>
                                             	
                                                 <a href="{{ Route('reports.absants',$course->id) }}" class="btn btn-info btn-sm"><i class="fa fa-calendar"></i> Absants </a>
-                                            	<a href="{{ Route('courses.edit',$course->id) }}" class='btn btn btn-info btn-sm'> <i class="fa fa-th-list"></i> List </a>
-                                                <a href="#" data-href="{{ Route('courses.delete',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-file-text-o"></i> Invoice </a>
-
-                                                <a href="{{ Route('students.index',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-graduation-cap"></i> Certificate </a>
-                                                <a href="{{ Route('students.index',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-table"></i> All-Info </a>
+                                            	<a href="{{ Route('reports.list',$course->id) }}" class='btn btn btn-info btn-sm'> <i class="fa fa-th-list"></i> List </a>
+                                                <a href="{{ Route('reports.invoice',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-file-text-o"></i> Invoice </a>
+                                                <a href="{{ Route('reports.certificate',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-graduation-cap"></i> Certificate </a>
+                                                <a href="{{ Route('reports.allinfo',$course->id) }}" class='btn btn btn-info btn-sm'><i class="fa fa-table"></i> All-Info </a>
 
 
                                                 

@@ -63,11 +63,15 @@ class StudentsController extends Controller
     public function details($course_id=0,$id=0)
     {
         
+         # code...
         $gender =   config('config.gender');
-
-
-        $student = Student::find($id);
-        return view('courses.details',compact('course','lanquage','certificate','organization','awarding_body'));
+        $course = Course::findOrFail($course_id);
+       
+        $student_id = -1;
+        $certificate_no = -1;
+        $student = Student::findOrFail($id);
+        
+        return view('students.details',compact('student','gender','course_id','student_id','course','certificate_no'));
     }
 
     public function edit($course_id=0,$id=0)

@@ -56,7 +56,7 @@
                                             <td> {{ $student->student_id }}</td>
                                             <td> {{ $student->mobile }}</td>
                                             <td>
-                                            	<a href="{{ Route('students.details',$student->id) }}" class="btn btn-info btn-sm"><i class="fa fa-file-text-o"></i> Details </a>
+                                            	<a href="{{ Route('students.details',[$course_id,$student->id]) }}" class="btn btn-info btn-sm"><i class="fa fa-file-text-o"></i> Details </a>
                                             	<a href="{{ Route('students.edit',[$course_id,$student->id]) }}" class='btn btn-sm btn-success'> <i class="fa fa-edit"></i> Edit </a>
                                                 <a href="#" data-href="{{ Route('students.delete',[$course_id,$student->id]) }}" data-toggle="modal" data-target="#confirm-delete" class='btn btn btn-danger btn-sm'><i class="fa fa-trash"></i> Delete </a>
 

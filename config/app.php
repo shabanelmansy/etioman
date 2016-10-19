@@ -163,6 +163,7 @@ return [
 
         Laracasts\Flash\FlashServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Riskihajar\Terbilang\TerbilangL5ServiceProvider::class,
 
     ],
 
@@ -213,6 +214,7 @@ return [
         'Html' => Collective\Html\FormFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Terbilang' => Riskihajar\Terbilang\Facades\Terbilang::class,
 
     ],
 

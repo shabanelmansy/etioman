@@ -34,7 +34,8 @@
         "barryvdh/laravel-debugbar": "^2.2",
         "geoip2/geoip2": "~2.0",
         "laracasts/flash": "^2.0",
-        "phpoffice/phpword": "dev-master"
+        "phpoffice/phpword": "dev-master",
+        "riskihajar/terbilang": "dev-master"
     
     },
     "require-dev": {
