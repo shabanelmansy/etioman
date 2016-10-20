@@ -18,14 +18,14 @@ use Terbilang;
 class ReportsController extends Controller
 {
     //
-     public function index($value='')
+    public function index($value='')
     {
     	   $courses = Course::paginate(100);
     	
     	   return view('reports.index' , compact('courses'));
     }
 
-    public function list($course_id='')
+    public function reportlist($course_id='')
     {
         # code...
         $students = Course::findOrFail($course_id)->students()->get(array('name_en as english_name','name_ar as arabic_name', 'mobile as mobile' , 'email as email'))->toArray();

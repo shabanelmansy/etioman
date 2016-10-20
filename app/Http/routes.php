@@ -55,7 +55,7 @@ Route::get('students/{course_id}/{id}/delete',['as'=>'students.delete','uses'=>'
 Route::get('reports/',['as'=>'reports.index','uses'=>'ReportsController@index' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
 Route::get('reports/{course_id}/absants',['as'=>'reports.absants','uses'=>'ReportsController@absants' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
 Route::get('reports/{course_id}/invoice',['as'=>'reports.invoice','uses'=>'ReportsController@invoice' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
-Route::get('reports/{course_id}/list',['as'=>'reports.list','uses'=>'ReportsController@list' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
+Route::get('reports/{course_id}/list',['as'=>'reports.list','uses'=>'ReportsController@reportlist' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
 Route::get('reports/{course_id}/certificate',['as'=>'reports.certificate','uses'=>'ReportsController@certificate' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
 Route::get('reports/{course_id}/allinfo',['as'=>'reports.allinfo','uses'=>'ReportsController@allinfo' ,'middleware'=>['auth','roles'] , 'roles'=>['User','Admin','Manager']]);
 
