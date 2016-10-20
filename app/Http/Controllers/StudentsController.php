@@ -31,7 +31,8 @@ class StudentsController extends Controller
     	# code...
     	$gender =	config('config.gender');
         $course = Course::findOrFail($course_id);
-        if(empty($course))
+
+        if(isset($course))
             $last_id = 1;
         else
             $last_id = Student::orderBy('id', 'desc')->first()->id;
