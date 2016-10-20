@@ -31,7 +31,10 @@ class StudentsController extends Controller
     	# code...
     	$gender =	config('config.gender');
         $course = Course::findOrFail($course_id);
-        $last_id = Student::orderBy('id', 'desc')->first()->id;
+        if(empty($course))
+            $last_id = 1;
+        else
+            $last_id = Student::orderBy('id', 'desc')->first()->id;
 
         
         if($course->awarding_body =='local'){
