@@ -12,7 +12,8 @@
                     </div>
                     <div class="panel-body">
                          
-                        <form  role="form" method="POST" action="/login">
+                        
+                        {!! Form::open(['route'=>'auth.login' ,'role'=>'form']) !!}
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <fieldset>
                                 <div class="form-group">
@@ -35,7 +36,7 @@
 
 
                             </fieldset>
-                        </form>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
