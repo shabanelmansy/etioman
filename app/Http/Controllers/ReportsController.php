@@ -658,7 +658,7 @@ class ReportsController extends Controller
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
-                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم', null, $fancyTableFontStyle); 
+                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم', $fancyTableFontStyle); 
                 $table->addCell(600, $fancyTableCellStyle)->addText('الرقم', $fancyTableFontStyle);
 
 
