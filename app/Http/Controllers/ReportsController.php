@@ -156,7 +156,7 @@ class ReportsController extends Controller
 
                     
                     $table->addCell(6000, $fancyTableCellStyle)->addText('البيان              Subject',array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName); 
-                    $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10 ,'rtl'=> true ) , $fancyTableFontStyle);
+                    $table->addCell(3650, $fancyTableCellStyle)->addText('المبلغ (ر.ع)                            Amount(RO)', array('name' => 'AlHor','bold' => true, 'size' => 10 ,'rtl'=> true ) , $fancyTableFontStyle);
 
 
 
@@ -322,7 +322,7 @@ class ReportsController extends Controller
 
                         
                         $table->addCell(6000, $fancyTableCellStyle)->addText('البيان              Subject',array('name' => 'AlHor','bold' => true, 'size' => 10 , 'rtl'=> true ), $paragraphStyleName); 
-                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10, 'rtl'=> true ) , $fancyTableFontStyle);
+                        $table->addCell(3650, $fancyTableCellStyle)->addText(' المبلغ (ر.ع)                            Amount(RO)', array('name' => 'AlHor','bold' => true, 'size' => 10, 'rtl'=> true ) , $fancyTableFontStyle);
 
 
 
