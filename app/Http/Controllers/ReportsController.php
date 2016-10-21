@@ -619,7 +619,7 @@ class ReportsController extends Controller
 
 
                 $fontStyleName = 'Verdana';
-                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
+                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true, 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR));
 
 
                 $fontStyleName2 = 'Verdana';
