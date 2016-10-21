@@ -303,7 +303,7 @@ class ReportsController extends Controller
                         
                         $section->addText('Invoice - فاتورة ', $fontStyleName, $paragraphStyleName);
 
-                        $company_name =" الأفاضل / "." ".$student->name_ar;
+                        $company_name = $student->name_ar." / الأفاضل";
 
                         $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
 
@@ -322,7 +322,7 @@ class ReportsController extends Controller
 
                         
                         $table->addCell(6000, $fancyTableCellStyle)->addText('Subject                  البيان',array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName); 
-                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
+                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                      (ر.ع) المبلغ ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
 
 
 
