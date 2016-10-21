@@ -139,7 +139,7 @@ class ReportsController extends Controller
 
                     $company_name =" الأفاضل / "." ".$course->org_name;
 
-                    $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
+                    $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
 
                     ////////////////////////////////////
                    
@@ -156,13 +156,13 @@ class ReportsController extends Controller
 
                     
                     $table->addCell(6000, $fancyTableCellStyle)->addText('Subject                  البيان',array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName); 
-                    $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
+                    $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10 ,'rtl'=> true ) , $fancyTableFontStyle);
 
 
 
                     $table->addRow(500);
 
-                    $table->addCell(6000,$fancyTableCellStyle)->addText($course->title , array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER ,'bold' => true ), $paragraphStyleName);
+                    $table->addCell(6000,$fancyTableCellStyle)->addText($course->title , array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER ,'bold' => true ,'rtl'=> true  ), $paragraphStyleName);
 
                     $table->addCell(3650, $fancyTableCellStyle)->addText(number_format((float)$course->fees, 3 , '.', ''),array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName);
 
@@ -201,14 +201,14 @@ class ReportsController extends Controller
 
                     $table->addCell(4825, $fancyTableCellStyle)->addText('Account Name: Excellent Efficiency Trading',array('name' => 'AlHor','bold' => true, 'size' => 10), array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100)); 
 
-                    $table->addCell(4825, $fancyTableCellStyle)->addText('اسم الحساب : الكفاءة المميزة للتجارة ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                    $table->addCell(4825, $fancyTableCellStyle)->addText('اسم الحساب : الكفاءة المميزة للتجارة ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
 
                     $table->addRow(500);
 
                     $table->addCell(4825, $fancyTableCellStyle)->addText('Bank Name : Dofar Bank - Main Branch',array('name' => 'AlHor','bold' => true, 'size' => 10),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100)); 
 
-                    $table->addCell(4825, $fancyTableCellStyle)->addText('البنك والفرع : بنك ظفار - الفرع الرئيسي ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle); 
+                    $table->addCell(4825, $fancyTableCellStyle)->addText('البنك والفرع : بنك ظفار - الفرع الرئيسي ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle); 
 
                     /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -229,7 +229,7 @@ class ReportsController extends Controller
 
                     $table->addCell(3216, $fancyTableCellStyle)->addText('0104-060 2322-001', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
-                    $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم الحساب ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                    $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم الحساب ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
                     ////////////////////////
 
@@ -239,7 +239,7 @@ class ReportsController extends Controller
 
                     $table->addCell(3216, $fancyTableCellStyle)->addText('BDOFOMRUXXX', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
-                    $table->addCell(3216, $fancyTableCellStyle)->addText(': سوفت كود ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                    $table->addCell(3216, $fancyTableCellStyle)->addText(': سوفت كود ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
                     ///////////////////////
 
@@ -249,14 +249,14 @@ class ReportsController extends Controller
 
                     $table->addCell(3216, $fancyTableCellStyle)->addText('11154401', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
-                    $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم المستفيد ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                    $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم المستفيد ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
                     
                     /////////////////////////////////////////////////////////////////////////////////////////////
                     $section->addTextBreak(10);
                     $section->addText('        Signature and Stamp', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
 
-                    $section->addText('            الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
+                    $section->addText('            الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true ) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
                   
                 }else
                 {
@@ -321,14 +321,14 @@ class ReportsController extends Controller
                         $table->addRow(500);
 
                         
-                        $table->addCell(6000, $fancyTableCellStyle)->addText('Subject                  البيان',array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName); 
-                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
+                        $table->addCell(6000, $fancyTableCellStyle)->addText('Subject                  البيان',array('name' => 'AlHor','bold' => true, 'size' => 10 , 'rtl'=> true ), $paragraphStyleName); 
+                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10, 'rtl'=> true ) , $fancyTableFontStyle);
 
 
 
                         $table->addRow(500);
 
-                        $table->addCell(6000,$fancyTableCellStyle)->addText($course->title , array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER ,'bold' => true ), $paragraphStyleName);
+                        $table->addCell(6000,$fancyTableCellStyle)->addText($course->title , array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER ,'bold' => true , 'rtl'=> true  ), $paragraphStyleName);
 
                         $table->addCell(3650, $fancyTableCellStyle)->addText(number_format((float)$student->fee, 3 , '.', ''),array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName);
 
@@ -367,14 +367,14 @@ class ReportsController extends Controller
 
                         $table->addCell(4825, $fancyTableCellStyle)->addText('Account Name: Excellent Efficiency Trading',array('name' => 'AlHor','bold' => true, 'size' => 10), array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100)); 
 
-                        $table->addCell(4825, $fancyTableCellStyle)->addText('اسم الحساب : الكفاءة المميزة للتجارة ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                        $table->addCell(4825, $fancyTableCellStyle)->addText('اسم الحساب : الكفاءة المميزة للتجارة ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true) , $fancyTableFontStyle);
 
 
                         $table->addRow(500);
 
                         $table->addCell(4825, $fancyTableCellStyle)->addText('Bank Name : Dofar Bank - Main Branch',array('name' => 'AlHor','bold' => true, 'size' => 10),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100)); 
 
-                        $table->addCell(4825, $fancyTableCellStyle)->addText('البنك والفرع : بنك ظفار - الفرع الرئيسي ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle); 
+                        $table->addCell(4825, $fancyTableCellStyle)->addText('البنك والفرع : بنك ظفار - الفرع الرئيسي ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle); 
 
                         /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -405,7 +405,7 @@ class ReportsController extends Controller
 
                         $table->addCell(3216, $fancyTableCellStyle)->addText('BDOFOMRUXXX', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
-                        $table->addCell(3216, $fancyTableCellStyle)->addText(': سوفت كود ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                        $table->addCell(3216, $fancyTableCellStyle)->addText(': سوفت كود ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
                         ///////////////////////
 
@@ -415,14 +415,14 @@ class ReportsController extends Controller
 
                         $table->addCell(3216, $fancyTableCellStyle)->addText('11154401', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
-                        $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم المستفيد ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , $fancyTableFontStyle);
+                        $table->addCell(3216, $fancyTableCellStyle)->addText(': رقم المستفيد ', array('name' => 'AlHor','bold' => true, 'size' => 13 , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT ,'rtl'=> true ) , $fancyTableFontStyle);
 
                         
                         /////////////////////////////////////////////////////////////////////////////////////////////
                         $section->addTextBreak(10);
                         $section->addText('        Signature and Stamp', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
 
-                        $section->addText('            الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));
+                        $section->addText('            الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));
                     }
 
                 }
