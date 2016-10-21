@@ -305,7 +305,7 @@ class ReportsController extends Controller
 
                         $company_name =" الأفاضل / "." ".$student->name_ar;
 
-                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
+                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'rtl' => true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
 
                         ////////////////////////////////////
                        
@@ -619,7 +619,7 @@ class ReportsController extends Controller
 
 
                 $fontStyleName = 'Verdana';
-                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
+                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER,'rtl' => true));
 
 
                 $fontStyleName2 = 'Verdana';
@@ -637,7 +637,7 @@ class ReportsController extends Controller
                 $section->addText( $course->instructor , $fontStyleName, $paragraphStyleName);
 
                 $course_details = ' خلال الفتره من '.$course->start_at.' الى  '.$course->end_at.' المنعقد ب'.$course->venue;
-                $section->addText( $course_details ,null, $paragraphStyleName);
+                $section->addText( $course_details ,array('rtl' => true), $paragraphStyleName);
 
 
                 $section->addTextBreak(1);
