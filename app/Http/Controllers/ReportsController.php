@@ -629,7 +629,8 @@ class ReportsController extends Controller
                 $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
 
                 
-                $section->addText('كشف حضور والانصراف لبرنامج', $fontStyleName, $paragraphStyleName);
+                $text_head = 'كشف حضور والانصراف لبرنامج';
+                $section->addText($text_head, $fontStyleName, $paragraphStyleName);
                 $section->addText( $course->title , $fontStyleName, $paragraphStyleName);
                 $section->addText( $course->instructor , $fontStyleName, $paragraphStyleName);
 
