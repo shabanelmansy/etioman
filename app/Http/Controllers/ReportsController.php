@@ -644,7 +644,7 @@ class ReportsController extends Controller
                 $fancyTableStyle = array('borderSize' => 2, 'borderColor' => '006699', 'cellMargin' => 8, 'alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER);
                 $fancyTableFirstRowStyle = array('borderBottomSize' => 3, 'borderBottomColor' => '0000FF', 'bgColor' => '66BBFF' ,'textAlign'=>'center');
                 $fancyTableCellStyle = array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER , ''=>'');
-                $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL);
+                $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR);
                 $fancyTableFontStyle = array('bold' => true,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT);
 
                 $phpWord->addTableStyle($fancyTableStyleName, $fancyTableStyle, $fancyTableFirstRowStyle);
