@@ -633,8 +633,8 @@ class ReportsController extends Controller
                 
                 $text_head = 'كشف حضور والانصراف لبرنامج';
                 $section->addText($text_head, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER,'rtl' => true), $paragraphStyleName);
-                $section->addText( $course->title , $fontStyleName, $paragraphStyleName);
-                $section->addText( $course->instructor , $fontStyleName, $paragraphStyleName);
+                $section->addText( $course->title ,  array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER,'rtl' => true) , $paragraphStyleName);
+                $section->addText( $course->instructor ,  array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER,'rtl' => true) , $paragraphStyleName);
 
                 $course_details = ' خلال الفتره من '.$course->start_at.' الى  '.$course->end_at.' المنعقد ب'.$course->venue;
                 $section->addText( $course_details ,array('rtl' => true), $paragraphStyleName);
