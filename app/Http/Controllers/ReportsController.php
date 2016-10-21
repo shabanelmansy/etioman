@@ -477,11 +477,11 @@ class ReportsController extends Controller
                     //$section->addTextBreak(1);
                     
                     
-                    $section->addText('نشهد بأن', $fontStyleName, $paragraphStyleName);
+                    $section->addText('نشهد بأن', array('name' => 'Andalus','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true), $paragraphStyleName);
                     
 
                     
-                    $section->addText( $student->name_ar,array('name' => 'Furat','bold' => false, 'size' => 25, 'allCaps' => true ,'color' => 'a9600c'), $paragraphStyleName);
+                    $section->addText( $student->name_ar,array('name' => 'Andalus','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true ,'color' => 'a9600c'), $paragraphStyleName);
                      
                     if($student->gender=='male')
                         $gender=' أتم ';
@@ -489,29 +489,29 @@ class ReportsController extends Controller
                         $gender=' أتمت ';
 
                     $course_name = 'قد'.$gender.'بنجاح متطلبات دورة';
-                    $section->addText($course_name , $fontStyleName, $paragraphStyleName);
+                    $section->addText($course_name , array('name' => 'Andalus','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true) , $paragraphStyleName);
                      
-                    $section->addText( $course->title ,array('name' => 'Furat','bold' => false, 'size' => 25, 'allCaps' => true ,'color' => 'a9600c'), $paragraphStyleName);
+                    $section->addText( $course->title ,array('name' => 'Andalus','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true ,'color' => 'a9600c'), $paragraphStyleName);
 
                     $venue = 'المنعقدة ب'.$course->venue.' خلال الفترة من '.$course->start_at.' الى '.$course->end_at;
 
-                    $section->addText( $venue ,$fontStyleName, $paragraphStyleName);
+                    $section->addText( $venue , array('name' => 'Akhbar MT','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true) , $paragraphStyleName);
                      
                     $organization = ' بالتعاون مع '.$course->org_name;
 
-                    $section->addText( $organization ,$fontStyleName, $paragraphStyleName);
+                    $section->addText( $organization ,array('name' => 'Akhbar MT','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true), $paragraphStyleName);
                     
                     $certificate_no = 'شهاده رقم'.date('y').$course->id.$student->id.' صادرة في '.date('Y-m-d');
 
-                    $section->addText( $certificate_no ,$fontStyleName, $paragraphStyleName);
+                    $section->addText( $certificate_no ,array('name' => 'Akhbar MT','bold' => false, 'size' => 25, 'allCaps' => true , 'rtl' =>true), $paragraphStyleName);
 
 
                     $section->addTextBreak(1);
                     $section->addTextBreak(1);
 
-                    $section->addText( $course->instructor.' الخزانى                                                                                               أمجد رجا قسايمه',array('name' => 'Furat','bold' => false, 'size' => 18, 'allCaps' => true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
+                    $section->addText( $course->instructor.' الخزانى                                                                                               أمجد رجا قسايمه',array('name' => 'DecoType Naskh Variants','bold' => false, 'size' => 18, 'allCaps' => true , 'rtl'=> true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
 
-                    $section->addText( '          مدرب البرنامج                                                                                                       المدير العام',array('name' => 'Furat','bold' => false, 'size' => 18, 'allCaps' => true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
+                    $section->addText( '          مدرب البرنامج                                                                                                       المدير العام',array('name' => 'DecoType Naskh Variants','bold' => false, 'size' => 18, 'allCaps' => true, 'rtl'=> true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
 
                     
                 }
