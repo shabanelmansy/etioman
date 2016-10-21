@@ -303,9 +303,9 @@ class ReportsController extends Controller
                         
                         $section->addText('Invoice - فاتورة ', $fontStyleName, $paragraphStyleName);
 
-                        $company_name = $student->name_ar." / الأفاضل";
+                        $company_name =" الأفاضل / "." ".$student->name_ar;
 
-                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT , 'rtl' => true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100 ));
+                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100));
 
                         ////////////////////////////////////
                        
@@ -322,7 +322,7 @@ class ReportsController extends Controller
 
                         
                         $table->addCell(6000, $fancyTableCellStyle)->addText('Subject                  البيان',array('name' => 'AlHor','bold' => true, 'size' => 10), $paragraphStyleName); 
-                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                      (ر.ع) المبلغ ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
+                        $table->addCell(3650, $fancyTableCellStyle)->addText('Amount(RO)                     المبلغ (ر.ع)  ', array('name' => 'AlHor','bold' => true, 'size' => 10) , $fancyTableFontStyle);
 
 
 
@@ -661,7 +661,7 @@ class ReportsController extends Controller
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
-                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم ', null ,$fancyTableFontStyle); 
+                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم', null ,$fancyTableFontStyle); 
                 $table->addCell(600, $fancyTableCellStyle)->addText('الرقم', null ,$fancyTableFontStyle);
 
 
