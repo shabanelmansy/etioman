@@ -626,7 +626,7 @@ class ReportsController extends Controller
                 $phpWord->addFontStyle($fontStyleName2, array('name' => 'Andalus','bold' => false, 'size' => 12, 'allCaps' => true));
 
                 $paragraphStyleName = 'pStyle';
-                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
+                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR));
 
                 
                 $section->addText('كشف حضور والانصراف لبرنامج', $fontStyleName, $paragraphStyleName);
