@@ -305,7 +305,7 @@ class ReportsController extends Controller
 
                         $company_name = $student->name_ar." / الأفاضل";
 
-                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100 , 'rtl' => true));
+                        $section->addText($company_name, array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::RIGHT , 'rtl' => true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 100 ));
 
                         ////////////////////////////////////
                        
