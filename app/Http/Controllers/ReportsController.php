@@ -676,7 +676,7 @@ class ReportsController extends Controller
                     $table->addCell(1000,$fancyTableCellStyle)->addText("");
                     $table->addCell(1000,$fancyTableCellStyle)->addText("");
                     $table->addCell(1000,$fancyTableCellStyle)->addText("");
-                    $table->addCell(600,$fancyTableCellStyle)->addText($student->name_ar , null ,  $fancyTableFontStyle);
+                    $table->addCell(600,$fancyTableCellStyle)->addText($student->name_ar , array('rtl'=>true) ,  $fancyTableFontStyle);
                     $table->addCell(400,$fancyTableCellStyle)->addText($student->id , null , $fancyTableFontStyle);
 
                 }
