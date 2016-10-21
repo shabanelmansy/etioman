@@ -511,7 +511,7 @@ class ReportsController extends Controller
 
                     $section->addText("                             ".$course->instructor.'                                                                                                                                                                                              أمجد رجا قسايمه',array('name' => 'DecoType Naskh Variants','bold' => false, 'size' => 18, 'allCaps' => true , 'rtl'=> true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
 
-                    $section->addText( '                             مدرب البرنامج                                                                                                                                                                                              المدير العام',array('name' => 'DecoType Naskh Variants','bold' => false, 'size' => 18, 'allCaps' => true, 'rtl'=> true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
+                    $section->addText( '                             مدرب البرنامج                                                                                                                                                                                                            المدير العام',array('name' => 'DecoType Naskh Variants','bold' => false, 'size' => 18, 'allCaps' => true, 'rtl'=> true),array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT, 'spaceAfter' => 10));
 
                     
                 }
