@@ -619,14 +619,14 @@ class ReportsController extends Controller
 
 
                 $fontStyleName = 'Verdana';
-                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true));
+                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true ,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
 
 
                 $fontStyleName2 = 'Verdana';
                 $phpWord->addFontStyle($fontStyleName2, array('name' => 'Andalus','bold' => false, 'size' => 12, 'allCaps' => true));
 
                 $paragraphStyleName = 'pStyle';
-                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100 , 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
+                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
                 
                 $section->addText('كشف حضور والانصراف لبرنامج', $fontStyleName, $paragraphStyleName);
