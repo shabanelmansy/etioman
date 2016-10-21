@@ -619,14 +619,14 @@ class ReportsController extends Controller
 
 
                 $fontStyleName = 'Verdana';
-                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true, 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR));
+                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true, 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
 
 
                 $fontStyleName2 = 'Verdana';
                 $phpWord->addFontStyle($fontStyleName2, array('name' => 'Andalus','bold' => false, 'size' => 12, 'allCaps' => true));
 
                 $paragraphStyleName = 'pStyle';
-                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR));
+                $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100,'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL));
 
                 
                 $section->addText('كشف حضور والانصراف لبرنامج', $fontStyleName, $paragraphStyleName);
@@ -644,7 +644,7 @@ class ReportsController extends Controller
                 $fancyTableStyle = array('borderSize' => 2, 'borderColor' => '006699', 'cellMargin' => 8, 'alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER);
                 $fancyTableFirstRowStyle = array('borderBottomSize' => 3, 'borderBottomColor' => '0000FF', 'bgColor' => '66BBFF' ,'textAlign'=>'center');
                 $fancyTableCellStyle = array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER , ''=>'');
-                $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR);
+                $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL);
                 $fancyTableFontStyle = array('bold' => true,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::RIGHT);
 
                 $phpWord->addTableStyle($fancyTableStyleName, $fancyTableStyle, $fancyTableFirstRowStyle);
@@ -658,7 +658,7 @@ class ReportsController extends Controller
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
                 $table->addCell(1000, $fancyTableCellStyle)->addText('   /     /    ', $fancyTableFontStyle);
-                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم', $fancyTableFontStyle); 
+                $table->addCell(4000, $fancyTableCellStyle)->addText('الاسم', null, $fancyTableFontStyle); 
                 $table->addCell(600, $fancyTableCellStyle)->addText('الرقم', $fancyTableFontStyle);
 
 
