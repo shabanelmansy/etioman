@@ -685,7 +685,7 @@ class ReportsController extends Controller
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
                 $objWriter->save('absants_ar.docx');
                 
-                $file= __DIR__."/absants_ar.docx";
+                $file= "/absants_ar.docx";
                 $headers = array(
                           'Content-Type: application/docx',
                         );
