@@ -619,11 +619,13 @@ class ReportsController extends Controller
 
 
                 $fontStyleName = 'Verdana';
-                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true));
+                $phpWord->addFontStyle($fontStyleName, array('name' => 'Andalus','bold' => false, 'size' => 16, 'allCaps' => true , ,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
 
 
                 $fontStyleName2 = 'Verdana';
                 $phpWord->addFontStyle($fontStyleName2, array('name' => 'Andalus','bold' => false, 'size' => 12, 'allCaps' => true));
+
+
 
                 $paragraphStyleName = 'pStyle';
                 $phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
@@ -644,7 +646,7 @@ class ReportsController extends Controller
                 $fancyTableStyleName = 'Fancy Table';
                 $fancyTableStyle = array('borderSize' => 2, 'borderColor' => '006699', 'cellMargin' => 8, 'alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER);
                 $fancyTableFirstRowStyle = array('borderBottomSize' => 3, 'borderBottomColor' => '0000FF', 'bgColor' => '66BBFF' ,'textAlign'=>'center');
-                $fancyTableCellStyle = array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER , ''=>'');
+                $fancyTableCellStyle = array('valign' => 'center' , 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER );
                 $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL);
                 $fancyTableFontStyle = array('bold' => true,'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER);
 
