@@ -256,7 +256,7 @@ class ReportsController extends Controller
                     $section->addTextBreak(10);
                     $section->addText('        Signature and Stamp', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
 
-                    $section->addText('  الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true ) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
+                    $section->addText('  الختم والتوقيع          ', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true ) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
                   
                 }else
                 {
@@ -422,7 +422,7 @@ class ReportsController extends Controller
                         $section->addTextBreak(10);
                         $section->addText('        Signature and Stamp', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));  
 
-                        $section->addText(' الختم والتوقيع', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));
+                        $section->addText(' الختم والتوقيع          ', array('name' => 'Furat','bold' => false, 'size' => 16 ,'alignment' =>\PhpOffice\PhpWord\SimpleType\Jc::LEFT ,'rtl'=> true) , array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::LEFT, 'spaceAfter' => 100));
                     }
 
                 }
