@@ -683,7 +683,7 @@ class ReportsController extends Controller
                 
                 // Saving the document as HTML file...
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-                $objWriter->save('public/absants_ar.docx');
+                $objWriter->save('local/public/absants_ar.docx');
                 
                 $file= public_path()."/absants_ar.docx";
                 $headers = array(
