@@ -431,7 +431,7 @@ class ReportsController extends Controller
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
                 $objWriter->save('invoice.docx');
 
-                $file= public_path(). "/invoice.docx";
+                $file= public_path(). "local/public//invoice.docx";
                 $headers = array(
                           'Content-Type: application/docx',
                         );
@@ -518,7 +518,7 @@ class ReportsController extends Controller
 
                 // Saving the document as HTML file...
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-                $objWriter->save('certificate_ar.docx');
+                $objWriter->save('local/public/certificate_ar.docx');
 
                 $file= public_path(). "/certificate_ar.docx";
                 $headers = array(
@@ -589,7 +589,7 @@ class ReportsController extends Controller
 
                 // Saving the document as HTML file...
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-                $objWriter->save('certificate_ar.docx');
+                $objWriter->save('local/public/certificate_ar.docx');
 
                 $file= public_path(). "/certificate_ar.docx";
                 $headers = array(
@@ -777,7 +777,7 @@ class ReportsController extends Controller
                 
                 // Saving the document as HTML file...
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-                $objWriter->save('absants_en.docx');
+                $objWriter->save('local/public/absants_en.docx');
 
                 $file= public_path(). "/absants_en.docx";
                 $headers = array(
@@ -793,7 +793,7 @@ class ReportsController extends Controller
     public function getDownload()
     {
         //PDF file is stored under project/public/download/info.pdf
-        $file= public_path(). "/helloWorld.docx";
+        $file= public_path(). "local/public//helloWorld.docx";
 
         $headers = array(
                   'Content-Type: application/docx',
