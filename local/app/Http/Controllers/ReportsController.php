@@ -429,9 +429,9 @@ class ReportsController extends Controller
 
                 // Saving the document as HTML file...
                 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-                $objWriter->save('invoice.docx');
+                $objWriter->save('local/public/invoice.docx');
 
-                $file= public_path(). "local/public//invoice.docx";
+                $file= public_path(). "/invoice.docx";
                 $headers = array(
                           'Content-Type: application/docx',
                         );
