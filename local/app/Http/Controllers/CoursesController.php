@@ -10,7 +10,8 @@ use Carbon\Carbon;
 use App\User;
 use Auth;
 use Session;
- 
+use App\Invoice;
+use DB;
  
 
 class CoursesController extends Controller
@@ -48,9 +49,26 @@ class CoursesController extends Controller
     	Session::put('awarding_bodyC', $request->get('awarding_body'));
     	*/
 
-    	 $course = new Course($request->all());
+    	 
+
+         $course = new Course($request->all());
          Auth::user()->courses()->save($course);
- 
+
+         
+         $courseid = $course->id;
+          
+         $organization = $request->organization;
+         
+         if($organization=='group')
+         {
+            $invoice = new Invoice;
+
+            $invoice->course_id = $courseid;
+            $invoice->type = 'credit';
+            $invoice->price = $request->fees;
+            $invoice->save();
+         }
+
          flash('Your Course has been created', 'success')->important();
 
 
